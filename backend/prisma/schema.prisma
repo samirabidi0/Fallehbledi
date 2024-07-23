@@ -40,7 +40,6 @@ model experts {
   certificate  String
 }
 
-
 model farmtools {
   name        String
   description String
@@ -49,3 +48,29 @@ model farmtools {
   category    String
   quantity    Int
 }
+
+model weather {
+  date         String
+  day          String
+  temperature  String
+  sky          Sky
+  observations Observation
+  feelsLike    String
+  wind         Wind
+}
+
+type Sky {
+  code String
+  text String
+}
+
+type Observation {
+  time String
+  point String
+}
+
+type Wind {
+  display String
+  speed   String
+}
+
