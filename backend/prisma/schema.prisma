@@ -67,6 +67,3 @@ model prices {
   title String
   price Int
 }
-
-
-
