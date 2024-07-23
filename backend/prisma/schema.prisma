@@ -25,9 +25,9 @@ model farmer {
   status    status
 }
 enum status {
-  free    String
-  Standard String
-  Premium   String
+  free    
+  Standard 
+  Premium   
 }
 
 
@@ -41,6 +41,7 @@ model experts {
 }
 
 model farmtools {
+  id          Int @id @default(autoincrement())
   name        String
   description String
   price       Int
@@ -50,27 +51,22 @@ model farmtools {
 }
 
 model weather {
+  id           Int @id @default(autoincrement())
   date         String
   day          String
   temperature  String
-  sky          Sky
-  observations Observation
+  sky          String
+  observations String
   feelsLike    String
-  wind         Wind
+  windDisplay  String
+  windSpeed    String
 }
 
-type Sky {
-  code String
-  text String
+model prices {
+  id    Int @id @default(autoincrement())
+  title String
+  price Int
 }
 
-type Observation {
-  time String
-  point String
-}
 
-type Wind {
-  display String
-  speed   String
-}
 
