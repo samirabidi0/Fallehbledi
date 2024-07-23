@@ -44,3 +44,4 @@ type Wind {
   display String
   speed   String
 }
+
