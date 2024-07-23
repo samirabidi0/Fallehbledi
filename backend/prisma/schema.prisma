@@ -13,35 +13,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id       Int @id @default(autoincrement())
-  name     String
-  email    String
-  password String
-}
 
 model weather {
+  id           Int @id @default(autoincrement())
   date         String
   day          String
   temperature  String
-  sky          Sky
-  observations Observation
+  sky          String
+  observations String
   feelsLike    String
-  wind         Wind
+  windDisplay  String
+  windSpeed    String
 }
 
-type Sky {
-  code String
-  text String
-}
-
-type Observation {
-  time String
-  point String
-}
-
-type Wind {
-  display String
-  speed   String
-}
 
