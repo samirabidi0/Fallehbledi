@@ -4,10 +4,10 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 exports.Register = [
-  body('firstName')
-    .isLength({ min: 4 }).withMessage('First name must be longer than 4 characters'),
-  body('lastName')
-    .isLength({ min: 4 }).withMessage('Last name must be longer than 4 characters'),
+  // body('firstName')
+  //   .isLength({ min: 4 }).withMessage('First name must be longer than 4 characters'),
+  // body('lastName')
+  //   .isLength({ min: 4 }).withMessage('Last name must be longer than 4 characters'),
   body('email')
     .isEmail().withMessage('Email must be valid')
     .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/).withMessage('Email must be a valid email address format'),
