@@ -14,20 +14,33 @@ datasource db {
 }
 
 model farmer {
-  id       Int @id @default(autoincrement())
-  firstName     String
+  id           Int    @id @default(autoincrement())
+  firstName    String
   lastName     String
-  email    String
+<<<<<<< HEAD
+  email    String  @unique
   password String
+  phone    String
   adress   String
   location  String
+  profileImage String?
+  status    status @default(pending)
+  // isVerified Boolean  @default(false)
+=======
+  email        String @unique
+  password     String
+  address      String
+  location     String
   profileImage String
-  status    status
+  status       status  @default(pending)
+>>>>>>> f7e8e99f6743ffaa230ee79270cd7dcf785c1cd9
 }
+
 enum status {
-  free    String
-  Standard String
-  Premium   String
+  pending
+  free    
+  Standard 
+  Premium   
 }
 
 
@@ -41,6 +54,7 @@ model experts {
 }
 
 model farmtools {
+  id          Int @id @default(autoincrement())
   name        String
   description String
   price       Int
@@ -50,27 +64,19 @@ model farmtools {
 }
 
 model weather {
+  id           Int @id @default(autoincrement())
   date         String
   day          String
   temperature  String
-  sky          Sky
-  observations Observation
+  sky          String
+  observations String
   feelsLike    String
-  wind         Wind
+  windDisplay  String
+  windSpeed    String
 }
 
-type Sky {
-  code String
-  text String
+model prices {
+  id    Int @id @default(autoincrement())
+  title String
+  price Int
 }
-
-type Observation {
-  time String
-  point String
-}
-
-type Wind {
-  display String
-  speed   String
-}
-

@@ -1,10 +1,10 @@
-const bcrypt = requrie('bcrypt')
+const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const prisma = require('@prisma/client')
 const { PrismaClient } = require('@prisma/client')
 
 
-const signIn = async (req, res) => {
+const signInExpert = async (req, res) => {
     const { email, password } = req.body;
   
     if (!email || !password) {
@@ -55,4 +55,4 @@ const signIn = async (req, res) => {
     }
   };
 
-  module.exports = signIn
+  module.exports = signInExpert
