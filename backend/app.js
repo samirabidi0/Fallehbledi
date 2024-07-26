@@ -4,6 +4,7 @@ const  {pricesData} = require('./helpers/pricesData')
 const prisma = require("./database/prisma")
 const cors = require("cors")
 const routersAuthfarmer = require("./routes/Authfarmer.js")
+const routerFarmtools = require("./routes/FarmerTools.js")
 const app = express();
 
 
@@ -21,6 +22,7 @@ const port = 5000;
 
 app.get('/prices',pricesData);
 app.use('/api/farmer',routersAuthfarmer)
+app.use('/api/tools', routerFarmtools)
 
 
 //Listen for requests :
