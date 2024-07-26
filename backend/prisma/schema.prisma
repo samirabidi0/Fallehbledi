@@ -14,17 +14,17 @@ datasource db {
 }
 
 model farmer {
-  id       Int @id @default(autoincrement())
-  firstName     String
+  id           Int    @id @default(autoincrement())
+  firstName    String
   lastName     String
-  email    String  @unique
-  password String
-  adress   String
-  location  String
+  email        String @unique
+  password     String
+  address      String
+  location     String
   profileImage String
-  status    status @default(pending)
-  // isVerified Boolean  @default(false)
+  status       status  @default(pending)
 }
+
 enum status {
   pending
   free    
