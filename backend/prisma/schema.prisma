@@ -14,17 +14,19 @@ datasource db {
 }
 
 model farmer {
-  id       Int @id @default(autoincrement())
-  firstName     String
+  id           Int    @id @default(autoincrement())
+  firstName    String
   lastName     String
-  email    String
-  password String
-  adress   String
-  location  String
+  email        String @unique
+  password     String
+  address      String
+  location     String
   profileImage String
-  status    status
+  status       status  @default(pending)
 }
+
 enum status {
+  pending
   free    
   Standard 
   Premium   
@@ -67,6 +69,3 @@ model prices {
   title String
   price Int
 }
-
-
-
