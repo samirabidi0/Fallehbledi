@@ -3,6 +3,7 @@ const dotenv = require("dotenv")
 const  {pricesData} = require('./helpers/pricesData')
 const prisma = require("./database/prisma")
 const routersAuthfarmer = require("./routes/Authfarmer.js")
+const {getWeather} = require('./WeatherAPI/Weather.js')
 //Declare the express app
 const cors = require("cors")
 
@@ -19,6 +20,7 @@ dotenv.config();
 
 app.get('/prices',pricesData);
 app.use('/api/farmer',routersAuthfarmer)
+app.get('/weather',getWeather)
 
 
 //Listen for requests  :

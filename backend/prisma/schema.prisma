@@ -17,7 +17,7 @@ model farmer {
   id           Int    @id @default(autoincrement())
   firstName    String
   lastName     String
-  email        String
+  email        String @unique
   password     String
   address      String
   location     String
