@@ -1,5 +1,5 @@
 -- CreateEnum
-CREATE TYPE "status" AS ENUM ('free', 'Standard', 'Premium');
+CREATE TYPE "status" AS ENUM ('pending', 'free', 'Standard', 'Premium');
 
 -- CreateTable
 CREATE TABLE "farmer" (
@@ -8,10 +8,11 @@ CREATE TABLE "farmer" (
     "lastName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
+    "phone" TEXT NOT NULL,
     "adress" TEXT NOT NULL,
     "location" TEXT NOT NULL,
-    "profileImage" TEXT NOT NULL,
-    "status" "status" NOT NULL,
+    "profileImage" TEXT,
+    "status" "status" NOT NULL DEFAULT 'pending',
 
     CONSTRAINT "farmer_pkey" PRIMARY KEY ("id")
 );
@@ -55,3 +56,15 @@ CREATE TABLE "weather" (
 
     CONSTRAINT "weather_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateTable
+CREATE TABLE "prices" (
+    "id" SERIAL NOT NULL,
+    "title" TEXT NOT NULL,
+    "price" INTEGER NOT NULL,
+
+    CONSTRAINT "prices_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "farmer_email_key" ON "farmer"("email");
