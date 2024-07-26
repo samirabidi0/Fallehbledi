@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
-import logo from '../../../public/image/img.jpg';
-import logo1 from '../../../public/image/falleh.png';
+import logo from '../../../../public/image/img.jpg';
+import logo1 from '../../../../public/image/falleh.png';
 
 interface User {
   firstName: string;

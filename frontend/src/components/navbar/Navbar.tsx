@@ -8,10 +8,10 @@ const Navbar = () => {
     <header className="fixed w-full">
         <nav className="bg-white border-gray-200 py-2.5">
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
-                <a href="#" className="flex items-center">
+                <Link href="/" className="flex items-center">
                     <Image src={Logo} className="w-[120px] auto ml-1 sm:w-[134px]" alt="Landwind Logo" />
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Landwind</span>
-                </a>
+                </Link>
                 <div className="flex items-center lg:order-2">
                 <a href="" className="text-[#000]  font-medium rounded-lg text-sm mr-2 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 hover:text-[#058f1a] ">Login</a>
                 <a href="" className="text-white bg-[#058f1a] focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm  lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0">Signup</a>
@@ -24,13 +24,13 @@ const Navbar = () => {
                 <div className="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
-                            <a href="#" className="block py-2 pl-3 pr-4 text-[16px] text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a]">Home</a>
+                            <Link href="/" className="block py-2 pl-3 pr-4 text-[16px] text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a]">Home</Link>
                         </li>
                         <li>
                             <a href="#" className="block py-2 pl-3 pr-4 text-[16px] text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a]">News</a>
                         </li>
                         <li>
-                            <a href="#" className="block py-2 pl-3 pr-4 text-[16px] text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a] ">Marketplace</a>
+                            <Link href="/marketplace" className="block py-2 pl-3 pr-4 text-[16px] text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a] ">Marketplace</Link>
                         </li>
                         <li>
                             <a href="#" className="block py-2 pl-3 pr-4 text-[16px] text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a]">Community</a>
@@ -39,7 +39,9 @@ const Navbar = () => {
                             <a href="#" className="block py-2 pl-3 pr-4 text-[16px] text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a]">About</a>
                         </li>
                         <li>
-                            <a href="#" className="block py-2 pl-3 pr-4 text-[16px]  text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#0] lg:p-0 hover:text-[#058f1a]">Contact</a>
+                            <a href="#" className="block py-2 pl-3 pr-4 text-[16px]  text-white bg-[#058f1a] rounded lg:bg-transparent lg:text-[#000] lg:p-0 hover:text-[#058f1a]">Contact</a>
+                        </li>
+                        <li>
                         </li>
                     </ul>
                 </div>
