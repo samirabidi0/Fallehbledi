@@ -8,9 +8,10 @@ CREATE TABLE "farmer" (
     "lastName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
+    "phone" TEXT NOT NULL,
     "adress" TEXT NOT NULL,
     "location" TEXT NOT NULL,
-    "profileImage" TEXT NOT NULL,
+    "profileImage" TEXT,
     "status" "status" NOT NULL DEFAULT 'pending',
 
     CONSTRAINT "farmer_pkey" PRIMARY KEY ("id")
