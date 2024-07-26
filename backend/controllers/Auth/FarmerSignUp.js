@@ -4,10 +4,10 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 exports.Register = [
-  // body('firstName')
-  //   .isLength({ min: 4 }).withMessage('First name must be longer than 4 characters'),
-  // body('lastName')
-  //   .isLength({ min: 4 }).withMessage('Last name must be longer than 4 characters'),
+  body('firstName')
+    .isLength({ min: 4 }).withMessage('First name must be longer than 4 characters'),
+  body('lastName')
+    .isLength({ min: 4 }).withMessage('Last name must be longer than 4 characters'),
   body('email')
     .isEmail().withMessage('Email must be valid')
     .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/).withMessage('Email must be a valid email address format'),
@@ -30,19 +30,9 @@ exports.Register = [
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { firstName, lastName, email, password, adress, profileImage, location, status } = req.body;
+    const { firstName, lastName, email, password, adress, profileImage, location, status ,phone} = req.body;
 
     try {
-      // const existingUser = await prisma.farmer.findFirst({
-      //   where: {
-      //    email
-      //   }
-      // });
-
-      // if (existingUser) {
-      //   console.log(existingUser.firstName === firstName ? 'First name already in use' : 'Email already in use'); // Log existing user case
-      //   return res.status(400).json({ errors: [{ msg: existingUser.firstName === firstName ? "First name already in use" : "Email already in use", param: existingUser.firstName === firstName ? "firstName" : "email" }] });
-      // }
 
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(password, salt);
@@ -57,7 +47,8 @@ exports.Register = [
           password: hashedPassword,
           adress,
           location,
-          profileImage,
+          // profileImage,
+          phone,
           status: farmerStatus 
         }
       });
