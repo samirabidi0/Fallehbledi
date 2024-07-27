@@ -17,7 +17,7 @@ model farmer {
   id           Int    @id @default(autoincrement())
   firstName    String
   lastName     String
-<<<<<<< HEAD
+
   email    String  @unique
   password String
   phone    String
@@ -26,14 +26,6 @@ model farmer {
   profileImage String?
   status    status @default(pending)
   // isVerified Boolean  @default(false)
-=======
-  email        String @unique
-  password     String
-  address      String
-  location     String
-  profileImage String
-  status       status  @default(pending)
->>>>>>> f7e8e99f6743ffaa230ee79270cd7dcf785c1cd9
 }
 
 enum status {
