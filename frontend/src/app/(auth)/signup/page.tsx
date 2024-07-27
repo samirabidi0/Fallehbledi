@@ -3,9 +3,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+<<<<<<< HEAD:frontend/src/app/signup/page.tsx
 import logo from '../../../public/image/img.jpg';
 import logo1 from '../../../public/image/falleh.png';
 import { Result } from 'postcss';
+=======
+import logo from '../../../../public/image/img.jpg';
+import logo1 from '../../../../public/image/falleh.png';
+>>>>>>> e311cadff7ff3410431fa941bd911be3800f458a:frontend/src/app/(auth)/signup/page.tsx
 
 // interface User {
 //   firstName: string;
