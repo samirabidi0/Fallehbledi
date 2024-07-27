@@ -25,9 +25,6 @@ async function getData(): Promise<Tools[]> {
 // Server-side component
 export default async function Page() {
   const products = await getData();
-
- 
-
   return (
     <div className='flex items-center justify-center flex-col p-6'>
       <div className='flex items-center max-w-full mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white mt-16'>
