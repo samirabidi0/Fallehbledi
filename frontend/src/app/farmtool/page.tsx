@@ -26,6 +26,8 @@ async function getData(): Promise<Tools[]> {
 export default async function Page() {
   const products = await getData();
 
+ 
+
   return (
     <div className='flex items-center justify-center flex-col p-6'>
       <div className='flex items-center max-w-full mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white mt-16'>
@@ -63,7 +65,7 @@ export default async function Page() {
               <div className="flex items-center justify-between">
                 <p className="flex items-center text-yellow-500">
                   <i className="fas fa-star"></i>
-                  <span className="ml-1 text-black font-bold">🗃️ {element.quantity} pcs</span>
+                  <span className="ml-1 text-black font-bold"> 🗃️ {element.quantity} pcs</span>
                 </p>
                 <span className="text-xs font-bold">price: {element.price} DNT</span>
               </div>
