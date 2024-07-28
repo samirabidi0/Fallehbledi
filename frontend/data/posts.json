@@ -1,4 +1,4 @@
-[
+{"posts":[
     {
       "id": 1,
       "title": "Powdery Mildew",
@@ -41,4 +41,27 @@
       "content": "Anthracnose is a group of fungal diseases that cause dark, sunken lesions on leaves, stems, flowers, and fruits. It can lead to defoliation, reduced fruit quality, and plant death if severe.",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_kH9QWaxJc-gTyBsTbiGN7rb-bpgmfMsKpsGtPePWlIVbhVfillkYk1uhitljIIVFtOc&usqp=CAU"
     }
+  ],
+  "topCreators": [
+    {
+      "rank": 1,
+      "userName": "Samir Abidi",
+      "points": 1000
+    },
+    {
+      "rank": 2,
+      "userName": "Wajdi Salem",
+      "points": 900
+    },
+    {
+      "rank": 3,
+      "userName": "Ahmed Ali",
+      "points": 800
+    },
+    {
+      "rank": 4,
+      "useName": "Mouhamed Barhoumi",
+      "points": 700
+    }
   ]
+}

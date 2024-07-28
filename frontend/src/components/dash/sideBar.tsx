@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const sideBar = () => {
   return (
     <div className="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width">
@@ -16,10 +18,10 @@ const sideBar = () => {
             </div>
             </li>
             <li className="">
-            <a href="" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
+            <Link href="/dash" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
                 <svg className="w-6 h-6 text-gray-900  transition duration-75 "  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                 <span className="ml-3" sidebar-toggle-item>Dashboard</span>
-            </a>
+            </Link>
             </li>
             <li className="">
             <a href="" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
@@ -27,16 +29,16 @@ const sideBar = () => {
             </a>
             </li>
             <li className="">
-            <a href="" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
+            <Link href="/marketprices" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
                 <svg className="w-6 h-6 text-gray-900  transition duration-75 "  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                 <span className="ml-3" sidebar-toggle-item>Market Price</span>
-            </a>
+            </Link>
             </li>
             <li className="">
-            <a href="" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
+            <Link href="/editprofile" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
                 <svg className="w-6 h-6 text-gray-900  transition duration-75 "  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                 <span className="ml-3" sidebar-toggle-item>Settings</span>
-            </a>
+            </Link>
             </li>
         </ul>
         </div>
