@@ -61,7 +61,7 @@ model currentWeather {
   humidity     Int
   windspeed    String
   location     String
-  date         Date
+  date         DateTime
 }
 
 model WeatherForecast {
