@@ -14,18 +14,18 @@ export default async function Page() {
   const forecast = data[1];
 
   return (
-    <div className="p-10">
-      <div className="flex flex-col lg:flex-row justify-between bg-white rounded-lg shadow-md p-8">
+    <div className="p-14">
+      <div className="flex flex-col lg:flex-row justify-between bg-white rounded-lg shadow-md p-14">
         <div className="lg:w-3/5">
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-14 ml-72 mt">
             <span className="text-gray-500">{current.location}</span>
-            <span className="text-gray-500">{current.date}</span>
+            <span className="text-gray-500 text-3xl mb-7">{current.date}</span>
           </div>
-          <div className="text-8xl font-bold text-gray-800">{current.temperature}°</div>
-          <div className="text-2xl text-gray-500 mb-4">{current.weather}</div>
+          <div className="text-8xl font-bold text-gray-800 ml-72">{current.temperature}°</div>
+          <div className="text-2xl text-gray-500 mb-5 ml-72">{current.weather}</div>
           <div className="flex space-x-4 text-gray-500">
             <div className="flex items-center space-x-1">
-              <span className="text-lg">{current.windspeed} mph</span>
+              <span className="text-lg ml-72">{current.windspeed} mph</span>
             </div>
             <div className="flex items-center space-x-1">
               <span className="text-lg">{current.humidity} %</span>
