@@ -226,7 +226,7 @@ const Signup: React.FC = () => {
           </div>
           <div className="mt-12 text-center">
             <button
-              type="button"
+              type="submit"
               className="py-3.5 px-7 text-sm font-semibold tracking-wider rounded-md text-white bg-green-600 focus:outline-none"
             >
               Sign up
