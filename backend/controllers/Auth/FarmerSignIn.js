@@ -1,12 +1,17 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const prisma = require('@prisma/client')
 const { PrismaClient } = require('@prisma/client')
+const prisma = new PrismaClient()
 
+
+require("dotenv").config()
 
 const signInFarmer = async (req, res) => {
+
+
+
     const { email, password } = req.body;
-  
+  console.log(email,password);
     if (!email || !password) {
       return res.status(404).json({ error: "Email or Password not found." });
     }
@@ -32,6 +37,7 @@ const signInFarmer = async (req, res) => {
       }
   
       // Generate a JSON Web Token (JWT) for authentication
+      
       const token = jwt.sign(
         {
           userId: farmer.id,

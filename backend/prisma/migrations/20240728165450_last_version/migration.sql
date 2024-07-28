@@ -8,9 +8,10 @@ CREATE TABLE "farmer" (
     "lastName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
+    "phone" TEXT NOT NULL,
     "adress" TEXT NOT NULL,
     "location" TEXT NOT NULL,
-    "profileImage" TEXT NOT NULL,
+    "profileImage" TEXT,
     "status" "status" NOT NULL DEFAULT 'pending',
 
     CONSTRAINT "farmer_pkey" PRIMARY KEY ("id")
@@ -42,18 +43,28 @@ CREATE TABLE "farmtools" (
 );
 
 -- CreateTable
-CREATE TABLE "weather" (
+CREATE TABLE "currentWeather" (
     "id" SERIAL NOT NULL,
-    "date" TEXT NOT NULL,
-    "day" TEXT NOT NULL,
-    "temperature" TEXT NOT NULL,
-    "sky" TEXT NOT NULL,
-    "observations" TEXT NOT NULL,
-    "feelsLike" TEXT NOT NULL,
-    "windDisplay" TEXT NOT NULL,
-    "windSpeed" TEXT NOT NULL,
+    "temperature" INTEGER NOT NULL,
+    "weather" TEXT NOT NULL,
+    "humidity" INTEGER NOT NULL,
+    "windspeed" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
+    "date" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "weather_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "currentWeather_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "WeatherForecast" (
+    "id" SERIAL NOT NULL,
+    "lowTemperature" INTEGER NOT NULL,
+    "highTemperature" INTEGER NOT NULL,
+    "date" TEXT NOT NULL,
+    "weather" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
+
+    CONSTRAINT "WeatherForecast_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable

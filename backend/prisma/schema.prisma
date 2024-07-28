@@ -17,12 +17,14 @@ model farmer {
   id           Int    @id @default(autoincrement())
   firstName    String
   lastName     String
-  email        String @unique
-  password     String
-  address      String
-  location     String
-  profileImage String
-  status       status  @default(pending)
+  email    String  @unique
+  password String
+  phone    String
+  adress   String
+  location  String
+  profileImage String?
+  status    status @default(pending)
+  // isVerified Boolean  @default(false)
 }
 
 enum status {
@@ -52,16 +54,23 @@ model farmtools {
   quantity    Int
 }
 
-model weather {
+model currentWeather {
   id           Int @id @default(autoincrement())
-  date         String
-  day          String
-  temperature  String
-  sky          String
-  observations String
-  feelsLike    String
-  windDisplay  String
-  windSpeed    String
+  temperature  Int
+  weather      String
+  humidity     Int
+  windspeed    String
+  location     String
+  date         DateTime
+}
+
+model WeatherForecast {
+  id              Int @id @default(autoincrement())
+  lowTemperature  Int
+  highTemperature Int
+  date            String
+  weather         String
+  location        String
 }
 
 model prices {
