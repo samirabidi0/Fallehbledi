@@ -55,4 +55,8 @@ const OneProduct = () => {
     )
 }
 
+<<<<<<< HEAD
 export default OneProduct
+=======
+export default OneProduct
+>>>>>>> 6da5859135ded88b69d13bf7c6b6792091937684
