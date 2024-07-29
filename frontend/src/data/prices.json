@@ -1,0 +1,112 @@
+{
+    "prices": [
+      {
+        "title": "SARDINES",
+        "price": 1450
+      },
+      {
+        "title": "MELONS",
+        "price": 8000
+      },
+      {
+        "title": "SAURELS",
+        "price": 1000
+      },
+      {
+        "title": "PASTEQUES",
+        "price": 3600
+      },
+      {
+        "title": "TOMATES",
+        "price": 500
+      },
+      {
+        "title": "SPARES",
+        "price": 600
+      },
+      {
+        "title": "PECHES",
+        "price": 8000
+      },
+      {
+        "title": "POIVRONS DOUX",
+        "price": 4000
+      },
+      {
+        "title": "MAQUEREAUX",
+        "price": 2000
+      },
+      {
+        "title": "PECHES PLATES",
+        "price": 26000
+      },
+      {
+        "title": "PIMENTS PIQUANTS",
+        "price": 4000
+      },
+      {
+        "title": "POMMES",
+        "price": 1200
+      },
+      {
+        "title": "MERLANS",
+        "price": 3000
+      },
+      {
+        "title": "PAGEAUX DE CHALUT",
+        "price": 26000
+      },
+      {
+        "title": "OIGNON SEC",
+        "price": 10000
+      },
+      {
+        "title": "PAGEAUX DE PALANGRE",
+        "price": 1100
+      },
+      {
+        "title": "GOURGETTES",
+        "price": 9000
+      },
+      {
+        "title": "PRUNES",
+        "price": 1500
+      },
+      {
+        "title": "CONCOMBRES",
+        "price": 4000
+      },
+      {
+        "title": "ROUGETS BLANCS",
+        "price": 1500
+      },
+      {
+        "title": "RAISINS",
+        "price": 23000
+      },
+      {
+        "title": "PERSIL",
+        "price": 4000
+      },
+      {
+        "title": "ROUGETS ROUGES",
+        "price": 1000
+      },
+      {
+        "title": "CITRONS",
+        "price": 45000
+      },
+      {
+        "title": "MULETS",
+        "price": 3000
+      },
+      {
+        "title": "SERRES",
+        "price": 10000
+      },
+      {
+        "title": "SEICHES",
+        "price": 30000
+      }
+    ]
+  }

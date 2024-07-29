@@ -7,11 +7,57 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-@media only screen and (max-width: 850px) {
-  
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
-.slider-section{
-  background: url('../../public/image/slide.png');
-  background-repeat: no-repeat;
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.ticker-wrap {
   
+  top: 1;
+  width: 100%;
+  overflow: hidden;
+  height: 3rem;
+  background:#058f1a;
+  padding-left: 100%;
+}
+
+.ticker {
+  display: inline-block;
+  height: 1rem;
+  line-height: 3rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 110s;
+  animation-duration: 110s;
+}
+.ticker_item {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 17px;
+  color: #fff;
 }
