@@ -1,6 +1,7 @@
+
 import { LiaShippingFastSolid } from "react-icons/lia";
 import Link from 'next/link';
-import Products from '../../data/products.json'
+import axios from "axios";
 
 interface Tools {
   id: number;
@@ -11,10 +12,11 @@ interface Tools {
   category: string;
   quantity: number;
 }
+ 
 
 // Fetch data on the server side
 async function getData(): Promise<Tools[]> {
-  const res = await fetch('http://127.0.0.1:5000/api/tools/all');
+  const res = await fetch('http://127.0.0.1:5000/api/tools/all', { next: { revalidate: 20 } });
   
   if (!res.ok) {
     throw new Error('Failed to fetch data');
@@ -24,7 +26,8 @@ async function getData(): Promise<Tools[]> {
 
 // Server-side component
 export default async function Page() {
-  const {products} = Products
+  const  products =await getData();
+  console.log(products);
   
   return (
     <div className='flex items-center justify-center flex-col p-6'>
@@ -35,6 +38,7 @@ export default async function Page() {
       </div>
       <div className='h-0.5 w-[75rem] bg-green-800 '></div>
       <p className='mt-4 mb-2 text-lg font-medium'>Search for your product : </p>
+      
       <input 
         type="text" 
         className="mb-4 p-2 border rounded shadow-sm w-full max-w-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-green-100"
