@@ -17,7 +17,10 @@ model farmer {
   id           Int    @id @default(autoincrement())
   firstName    String
   lastName     String
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6da5859135ded88b69d13bf7c6b6792091937684
   email    String  @unique
   password String
   phone    String
@@ -55,16 +58,23 @@ model farmtools {
   quantity    Int
 }
 
-model weather {
+model currentWeather {
   id           Int @id @default(autoincrement())
+  temperature  Int
+  weather      String
+  humidity     Int
+  windspeed    String
+  location     String
   date         String
-  day          String
-  temperature  String
-  sky          String
-  observations String
-  feelsLike    String
-  windDisplay  String
-  windSpeed    String
+}
+
+model WeatherForecast {
+  id              Int @id @default(autoincrement())
+  lowTemperature  Int
+  highTemperature Int
+  date            String
+  weather         String
+  location        String
 }
 
 model prices {
