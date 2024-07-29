@@ -36,7 +36,7 @@ export default async function Page() {
       <p className='mt-4 mb-2 text-lg font-medium'>Search for your product : </p>
       <input 
         type="text" 
-        className="mb-4 p-2 border rounded shadow-sm w-full max-w-md focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="mb-4 p-2 border rounded shadow-sm w-full max-w-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-green-100"
         placeholder=" 🔍 Search ..."
       />
 
