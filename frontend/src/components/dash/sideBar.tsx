@@ -28,14 +28,12 @@ const sideBar = () => {
             </li>
             <li className="">
             <a href="" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
-                <svg className="w-6 h-6 text-gray-900  transition duration-75 "  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-                <span className="ml-3" sidebar-toggle-item>Market Price</span>
+            <svg className="w-6 h-6 text-gray-900  transition duration-75 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g data-name="news android app aplication phone"><path d="M30.56 8.47a8 8 0 0 0-7-7 64.29 64.29 0 0 0-15.06 0 8 8 0 0 0-7 7 64.29 64.29 0 0 0 0 15.06 8 8 0 0 0 7 7 64.29 64.29 0 0 0 15.06 0 8 8 0 0 0 7-7 64.29 64.29 0 0 0 0-15.06zm-2 14.83a6 6 0 0 1-5.28 5.28 63.65 63.65 0 0 1-14.6 0 6 6 0 0 1-5.26-5.28 63.65 63.65 0 0 1 0-14.6A6 6 0 0 1 8.7 3.42a63.65 63.65 0 0 1 14.6 0 6 6 0 0 1 5.28 5.28 63.65 63.65 0 0 1 0 14.6z"/><path d="M13 7H9a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-4 8V9h4v6zM14 19h-4a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2zM14 23H8a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2zM25 11h-7a1 1 0 0 0 0 2h7a1 1 0 0 0 0-2zM25 7h-7a1 1 0 0 0 0 2h7a1 1 0 0 0 0-2zM25 15h-7a1 1 0 0 0 0 2h7a1 1 0 0 0 0-2zM25 19h-7a1 1 0 0 0 0 2h7a1 1 0 0 0 0-2zM23 23h-5a1 1 0 0 0 0 2h5a1 1 0 0 0 0-2z"/></g></svg>                <span className="ml-3" sidebar-toggle-item>Market Price</span>
             </a>
             </li>
             <li className="">
             <a href="" className="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-[#058f1a] hover:text-[#fff] ">
-                <svg className="w-6 h-6 text-gray-900  transition duration-75 "  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-                <span className="ml-3" sidebar-toggle-item>Settings</span>
+            <svg className="w-6 h-6 text-gray-900  transition duration-75 " version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 32 32"  ><style></style><path d="M16 19a1 1 0 0 1-1-1V4a1 1 0 1 1 2 0v14a1 1 0 0 1-1 1zM16 29a1 1 0 0 1-1-1v-4a1 1 0 1 1 2 0v4a1 1 0 0 1-1 1z"/><path d="M16 25c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zM6 13a1 1 0 0 1-1-1V4a1 1 0 1 1 2 0v8a1 1 0 0 1-1 1zM6 29a1 1 0 0 1-1-1V18a1 1 0 1 1 2 0v10a1 1 0 0 1-1 1z"/><path d="M6 19c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zM26 10a1 1 0 0 1-1-1V4a1 1 0 1 1 2 0v5a1 1 0 0 1-1 1zM26 29a1 1 0 0 1-1-1V15a1 1 0 1 1 2 0v13a1 1 0 0 1-1 1z"/><path d="M26 16c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z"/></svg> <span className="ml-3" sidebar-toggle-item>Settings</span>           
             </a>
             </li>
         </ul>

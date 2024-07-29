@@ -3,7 +3,10 @@ import HeroSection from '@/components/herosection/HeroSection'
 import IconTitle from '../../public/image/img-shap-left.png'
 import Image from 'next/image'
 import NewsCard from '@/components/freaturescard/featuresCard'
+
 export default function Home() {
+
+    
   return (
     <>
     <div className="hero  flex items-center justify-center p-8">
