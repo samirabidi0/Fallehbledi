@@ -77,7 +77,7 @@ module.exports = {
             res.status(500).send("Failed to delete the farmtool");
         }
     },
-<<<<<<< HEAD
+
      GetFarmtoolByName: async (req, res) => {
         try {
             const { name } = req.params;
@@ -95,8 +95,8 @@ module.exports = {
             console.error("Failed to fetch farmtool:", error);
             res.status(500).send("Failed to fetch farmtool");
         }
-    }
-=======
+    },
+
     GetFarmtoolByName: async (req, res) => {
        try {
            const { name } = req.params;
@@ -115,6 +115,4 @@ module.exports = {
            res.status(500).send("Failed to fetch farmtool");
        }
    }
->>>>>>> 6da5859135ded88b69d13bf7c6b6792091937684
-};
-
+}
