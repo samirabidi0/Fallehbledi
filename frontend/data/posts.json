@@ -1,0 +1,67 @@
+{"posts":[
+    {
+      "id": 1,
+      "title": "Powdery Mildew",
+      "userName": "Mouhamed Barhoumi",
+      "content": "Powdery mildew is a fungal disease that affects a wide range of plants. It is characterized by white powdery spots on leaves and stems, which can lead to reduced photosynthesis and weakened plants.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1cBcDDdBdwT2WU4FNb4P74Hn0J9lA1iA-yA&s"
+    },
+    {
+      "id": 2,
+      "title": "Late Blight",
+      "userName": "Achref Mehri",
+      "content": "Late blight is a serious disease caused by the water mold Phytophthora infestans. It affects potatoes and tomatoes, leading to large, dark blotches on leaves and stems, and can cause tubers and fruits to rot.",
+      "image": "https://t3.ftcdn.net/jpg/07/02/72/58/360_F_702725899_Ifh8GRhsmFYvSnaQdO0DiHZO3Os29O3Y.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Leaf Spot",
+      "userName": "Ahmed Ali",
+      "content": "Leaf spot is a common term for several fungal and bacterial diseases that cause spots on leaves. These spots can be brown, black, or yellow, and can lead to premature leaf drop.",
+      "image": "https://bloximages.newyork1.vip.townnews.com/telegraphherald.com/content/tncms/assets/v3/editorial/3/a8/3a88d475-03e7-5215-8dc5-fe3cd3f28873/507144c580f86.image.jpg?resize=751%2C500"
+    },
+    {
+      "id": 4,
+      "title": "Root Rot",
+      "userName": "Samir Abidi",
+      "content": "Root rot is caused by various soil-borne fungi and oomycetes, which lead to the decay of plant roots. Infected plants show stunted growth, yellowing leaves, and wilting, often resulting in plant death.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0fkFHoGFv8t7FstNlujqLgmOlGgyaJkKAAQ&s"
+    },
+    {
+      "id": 5,
+      "title": "Rust",
+      "userName": "Yassin Boudidah",
+      "content": "Rust is a fungal disease that appears as reddish or orange pustules on leaves and stems. It reduces plant vigor by interfering with photosynthesis and can significantly lower crop yields.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9_9B5MVXCMjIgxX60oYFNAqVS0oZsbjuUirSpyR_gQQ8DnmzhNGhGnbY7oOAVb12A5w&usqp=CAU"
+    },
+    {
+      "id": 6,
+      "title": "Anthracnose",
+      "userName": "Wajdi Salem",
+      "content": "Anthracnose is a group of fungal diseases that cause dark, sunken lesions on leaves, stems, flowers, and fruits. It can lead to defoliation, reduced fruit quality, and plant death if severe.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_kH9QWaxJc-gTyBsTbiGN7rb-bpgmfMsKpsGtPePWlIVbhVfillkYk1uhitljIIVFtOc&usqp=CAU"
+    }
+  ],
+  "topCreators": [
+    {
+      "rank": 1,
+      "userName": "Samir Abidi",
+      "points": 1000
+    },
+    {
+      "rank": 2,
+      "userName": "Wajdi Salem",
+      "points": 900
+    },
+    {
+      "rank": 3,
+      "userName": "Ahmed Ali",
+      "points": 800
+    },
+    {
+      "rank": 4,
+      "useName": "Mouhamed Barhoumi",
+      "points": 700
+    }
+  ]
+}
