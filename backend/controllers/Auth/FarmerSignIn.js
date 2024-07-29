@@ -37,7 +37,6 @@ const signInFarmer = async (req, res) => {
       }
 
       // Generate a JSON Web Token (JWT) for authentication
-
       const token = jwt.sign(
         {
           userId: farmer.id,
