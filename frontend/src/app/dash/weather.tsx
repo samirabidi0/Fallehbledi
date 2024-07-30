@@ -1,6 +1,9 @@
+import { error } from "console";
+
 async function getData() {
     const res = await fetch('http://127.0.0.1:5000/weather');
     if (!res.ok) {
+      console.log(error)
       throw new Error('Failed to fetch data');
     }
     return res.json();
@@ -8,7 +11,7 @@ async function getData() {
   
   export default async function Page() {
     const data = await getData();  
-    
+    console.log(data)
     return (
         <div className="">
             <div className="w-[30rem]   cursor-pointer  rounded flex justify-center items-center text-center p-6 bg-white">
