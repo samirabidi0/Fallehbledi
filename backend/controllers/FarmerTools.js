@@ -76,6 +76,49 @@ module.exports = {
             console.error("Failed to delete farmtool:", error);
             res.status(500).send("Failed to delete the farmtool");
         }
-    }
-};
+    },
 
+     GetFarmtoolByName: async (req, res) => {
+        try {
+            const { name } = req.params;
+
+            const farmtool = await prisma.farmtools.findFirst({
+                where: { name }
+            });
+
+            if (farmtool) {
+                res.status(200).json(farmtool);
+            } else {
+                res.status(404).send("Farmtool not found");
+            }
+        } catch (error) {
+            console.error("Failed to fetch farmtool:", error);
+            res.status(500).send("Failed to fetch farmtool");
+        }
+    },
+
+    GetFarmtoolByName: async (req, res) => {
+        try {
+            const { name } = req.params;
+    
+            const farmtool = await prisma.farmtools.findMany({
+                where: {
+                    name: {
+                        contains: name,
+                        mode: 'insensitive'
+                    }
+                }
+            });
+    
+            if (farmtool.length > 0) {
+                res.status(200).json(farmtool);
+            } else {
+                res.status(404).send("Farmtool not found");
+            }
+        } catch (error) {
+            console.error("Failed to fetch farmtool:", error);
+            res.status(500).send("Failed to fetch farmtool");
+        }
+    }
+    
+}
