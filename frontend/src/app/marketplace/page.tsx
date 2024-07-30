@@ -34,13 +34,13 @@ export default async function Page({ searchParams }: { searchParams: { name: str
   return (
     <div className='flex items-center justify-center flex-col p-6'>
       <div className='flex items-center max-w-full mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white mt-16'>
-        <h1 className='max-w-[45rem]  mr-32 text-gray-900'> Essential Tools for Modern Farmers and Top-Quality Farming Equipment for Every Need.</h1>
+        <h1 className='max-w-[45rem] mr-32 text-gray-900'> Essential Tools for Modern Farmers and Top-Quality Farming Equipment for Every Need.</h1>
         <img src="https://img.freepik.com/free-vector/organic-farming-concept-with-man-winking_23-2148423024.jpg" alt="Farming" className='w-56 ml-4 rounded' />
       </div>
       <div className='h-0.5 w-[75rem] bg-green-800 '></div>
 
       <p className='mt-4 mb-2 text-lg font-medium'>Search for your product : </p>
-      <form method="get" action="/">
+      <form method="get" action="/marketplace">
         <input 
           type="text" 
           name="name"
