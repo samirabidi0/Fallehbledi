@@ -76,5 +76,19 @@ CREATE TABLE "prices" (
     CONSTRAINT "prices_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "post" (
+    "id" SERIAL NOT NULL,
+    "title" TEXT NOT NULL,
+    "content" TEXT NOT NULL,
+    "image" TEXT NOT NULL,
+    "farmerId" INTEGER NOT NULL,
+
+    CONSTRAINT "post_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "farmer_email_key" ON "farmer"("email");
+
+-- AddForeignKey
+ALTER TABLE "post" ADD CONSTRAINT "post_farmerId_fkey" FOREIGN KEY ("farmerId") REFERENCES "farmer"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
