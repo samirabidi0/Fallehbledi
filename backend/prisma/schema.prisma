@@ -17,6 +17,10 @@ model farmer {
   id           Int    @id @default(autoincrement())
   firstName    String
   lastName     String
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6da5859135ded88b69d13bf7c6b6792091937684
   email    String  @unique
   password String
   phone    String
@@ -61,7 +65,7 @@ model currentWeather {
   humidity     Int
   windspeed    String
   location     String
-  date         DateTime
+  date         String
 }
 
 model WeatherForecast {

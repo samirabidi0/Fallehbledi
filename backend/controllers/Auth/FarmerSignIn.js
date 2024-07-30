@@ -15,7 +15,7 @@ const signInFarmer = async (req, res) => {
     if (!email || !password) {
       return res.status(404).json({ error: "Email or Password not found." });
     }
-  
+
     try {
       // Retrieve doctor from the database by email
       const farmer = await prisma.farmer.findUnique({
@@ -23,21 +23,21 @@ const signInFarmer = async (req, res) => {
           email: email
         }
       });
-  
+
       // Check if doctor exists
       if (!farmer) {
         return res.status(404).json({ error: "User not found." });
       }
-  
+
       // Checking if the password is valid
       const passwordMatch = await bcrypt.compare(password, farmer.password);
-  
+
       if (!passwordMatch) {
         return res.status(401).json({ error: "Password is incorrect." });
       }
-  
+
       // Generate a JSON Web Token (JWT) for authentication
-      
+
       const token = jwt.sign(
         {
           userId: farmer.id,
@@ -47,13 +47,17 @@ const signInFarmer = async (req, res) => {
           expiresIn: "1d",
         }
       );
-  
+
       let loggedUser = {
         id: farmer.id,
         FirstName: farmer.firstName,
-        LastName: farmer.lastName
+        LastName: farmer.lastName,
+        email:farmer.email,
+        phoneNumber:farmer.phone,
+        address:farmer.adress,
+      
       };
-  
+
       res.status(200).json({ loggedUser, token, message: "Login succeeded" });
     } catch (error) {
       console.error("Sign in error:", error);

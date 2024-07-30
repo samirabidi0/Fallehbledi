@@ -1,15 +1,15 @@
 // components/ContactForm.tsx
-import React from 'react';
 import Image from 'next/image';
-import logo from '../../../public/image/203.jpg'
-const ContactForm: React.FC = () => {
+import logo from '../../../public/image/Contact us-rafiki.png'
+const ContactForm= () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <main className="container mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6 ml-10">Contact Us!</h1>
-        <p className="text-gray-600 mb-6 ml-10">Have a question or you need information? fill the<br/> form with your informations and we will contact <br/>you as soon as possible.</p>
-        <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
-          <div className="bg-white shadow rounded-lg p-6 w-full md:w-1/2">
+    <div className=" min-h-screen">
+      <Image src={logo} alt="Farming" width={500} className='ml-[45rem] mt-52 absolute ' />
+    <main className="container mx-auto px-6 py-12   "> 
+        <div className="flex flex-col md:flex-col space-y-6 md:space-y-0 md:space-x-6">
+        <h1 className="text-4xl font-bold text-gray-800 mb-6 ml-10 mt-20">Contact Us!</h1>
+        <p className="text-gray-600 mb-6 ">Have a question or you need information? fill the<br/> form with your informations and we will contact <br/>you as soon as possible.</p>
+          <div className="bg-white  rounded-lg p-6 w-full md:w-1/2">
             <form>
               <div className="mb-4">
                 <label className="block text-gray-700">First Name</label>
@@ -31,8 +31,10 @@ const ContactForm: React.FC = () => {
             </form>
           </div>
           <div className="w-full md:w-1/2 flex items-center justify-center">
-            <Image src={logo} alt="Farming" className="w-full h-auto" />
           </div>
+        </div>
+        <div className="">
+
         </div>
       </main>
     </div>

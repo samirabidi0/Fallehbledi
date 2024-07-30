@@ -1,23 +1,10 @@
 // components/AboutUs.tsx
-import React from 'react';
-import Image from 'next/image';
-import logo from "../../../public/image/aboutus.jpg"
-
+ import Image from 'next/image'
+import Icon from '../../../public/image/About us page-pana.png'
 const Aboutus = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="sm:flex items-center max-w-screen-xl mx-auto bg-white p-10 rounded-lg shadow-md">
-        <div className="sm:w-1/2 p-10">
-          <div className="image object-center text-center">
-            {/* <Image
-              src={logo}
-              width={1000}
-              height={20}
-              alt="Picture of the farmer"
-            /> */}
-            <img src="https://img.freepik.com/photos-gratuite/femme-regarde-elle-tablette-quoique-agriculture_23-2148580032.jpg?size=626&ext=jpg&ga=GA1.2.1609262325.1718872085&semt=sph" alt="About us" />
-          </div>
-        </div>
+      <div className="sm:flex items-center max-w-screen-xl mx-auto bg-white p-10 rounded-lg">
         <div className="sm:w-1/2 p-5">
           <div className="text">
             <h2 className="my-4 font-bold text-3xl sm:text-4xl">
@@ -32,7 +19,13 @@ const Aboutus = () => {
             </p>
           </div>
         </div>
+        <div className="sm:w-1/2 p-10">
+          <div className="image object-center text-center">
+            <Image src={Icon} alt="About us" />
+          </div>
+        </div>
       </div>
+     
     </div>
   );
 };

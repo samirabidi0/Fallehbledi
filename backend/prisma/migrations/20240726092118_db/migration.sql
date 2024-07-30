@@ -50,7 +50,7 @@ CREATE TABLE "currentWeather" (
     "humidity" INTEGER NOT NULL,
     "windspeed" TEXT NOT NULL,
     "location" TEXT NOT NULL,
-    "date" TIMESTAMP(3) NOT NULL,
+    "date" TEXT NOT NULL,
 
     CONSTRAINT "currentWeather_pkey" PRIMARY KEY ("id")
 );
