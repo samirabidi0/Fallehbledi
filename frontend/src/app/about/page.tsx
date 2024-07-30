@@ -1,5 +1,5 @@
 // components/AboutUs.tsx
-import Image from 'next/image'
+ import Image from 'next/image'
 import Icon from '../../../public/image/About us page-pana.png'
 const Aboutus = () => {
   return (

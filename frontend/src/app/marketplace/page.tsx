@@ -1,7 +1,6 @@
-
+"use client"
 import { LiaShippingFastSolid } from "react-icons/lia";
 import Link from 'next/link';
-import axios from "axios";
 
 interface Tools {
   id: number;
@@ -12,38 +11,44 @@ interface Tools {
   category: string;
   quantity: number;
 }
- 
 
 // Fetch data on the server side
-async function getData(): Promise<Tools[]> {
-  const res = await fetch('http://127.0.0.1:5000/api/tools/all', { next: { revalidate: 20 } });
-  
+async function getData(query: string): Promise<Tools[]> {
+  const url = query 
+    ? `http://127.0.0.1:5000/api/tools/search?name=${query}` 
+    : 'http://127.0.0.1:5000/api/tools/all';
+
+  const res = await fetch(url, { next: { revalidate: 20 } });
+
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
-  return res.json()
+  return res.json();
 }
 
 // Server-side component
-export default async function Page() {
-  const  products =await getData();
-  console.log(products);
+export default async function Page({ searchParams }: { searchParams: { name: string } }) {
+  const query = searchParams.name || '';
+  const products = await getData(query);
   
   return (
     <div className='flex items-center justify-center flex-col p-6'>
       <div className='flex items-center max-w-full mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white mt-16'>
-        <h1 className='max-w-[45rem] mr-32 text-gray-900'> Essential Tools for Modern Farmers and Top-Quality Farming Equipment for Every Need.</h1>
-        
+        <h1 className='max-w-[45rem]  mr-32 text-gray-900'> Essential Tools for Modern Farmers and Top-Quality Farming Equipment for Every Need.</h1>
         <img src="https://img.freepik.com/free-vector/organic-farming-concept-with-man-winking_23-2148423024.jpg" alt="Farming" className='w-56 ml-4 rounded' />
       </div>
       <div className='h-0.5 w-[75rem] bg-green-800 '></div>
+
       <p className='mt-4 mb-2 text-lg font-medium'>Search for your product : </p>
-      
-      <input 
-        type="text" 
-        className="mb-4 p-2 border rounded shadow-sm w-full max-w-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-green-100"
-        placeholder=" 🔍 Search ..."
-      />
+      <form method="get" action="/">
+        <input 
+          type="text" 
+          name="name"
+          className="mb-4 p-2 border rounded shadow-sm w-full max-w-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-green-100"
+          placeholder=" 🔍 Search ..."
+        />
+        <button type="submit" className="hidden"></button>
+      </form>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
         {products.map((element) => (
