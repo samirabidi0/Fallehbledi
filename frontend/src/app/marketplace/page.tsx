@@ -1,9 +1,6 @@
-'use client'
 import { LiaShippingFastSolid } from "react-icons/lia";
 import Link from 'next/link';
-import Products from '../../data/products.json'
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 interface Tools {
   id: number;
@@ -14,39 +11,23 @@ interface Tools {
   category: string;
   quantity: number;
 }
+ 
 
 // Fetch data on the server side
-// async function getData(): Promise<Tools[]> {
-//   const res = await fetch('http://127.0.0.1:5000/api/tools/all');
+async function getData(): Promise<Tools[]> {
+  const res = await fetch('http://127.0.0.1:5000/api/tools/all', { next: { revalidate: 20 } });
   
-//   if (!res.ok) {
-//     throw new Error('Failed to fetch data');
-//   }
-//   return res.json()
-// }
-
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return res.json()
+}
 
 // Server-side component
-// export default async function Page() {
-//   const {products} = Products
+export default async function Page() {
+  const  products =await getData();
+  console.log(products);
   
-const Page: React.FC = () => {
-  
-  const [products, setproduct] = useState<Tools[]>([]);
-
-
-  useEffect(() => {
-    const fetchTalents = async () => {
-      try {
-        const response = await axios.get<Tools[]>('http://127.0.0.1:5000/api/tools/all');
-        setproduct(response.data);
-      } catch (error) {
-        console.error('Error fetching talents:', error);
-      }
-    };
-
-    fetchTalents();
-  }, []);
   return (
     <div className='flex items-center justify-center flex-col p-6'>
       <div className='flex items-center max-w-full mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white mt-16'>
@@ -56,6 +37,7 @@ const Page: React.FC = () => {
       </div>
       <div className='h-0.5 w-[75rem] bg-green-800 '></div>
       <p className='mt-4 mb-2 text-lg font-medium'>Search for your product : </p>
+      
       <input 
         type="text" 
         className="mb-4 p-2 border rounded shadow-sm w-full max-w-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-green-100"
@@ -104,4 +86,3 @@ const Page: React.FC = () => {
     </div>
   );
 }
-export default Page;

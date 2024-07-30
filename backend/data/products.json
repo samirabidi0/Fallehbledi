@@ -1,0 +1,66 @@
+
+[
+  {
+    "id": 1,
+    "name": "Plant Fertilizer",
+    "description": "fertilizer, natural or artificial substance containing the chemical elements that improve growth and productiveness of plants.",
+    "price": 86,
+    "image": "https://m.media-amazon.com/images/I/712DxU6c+nL.jpg",
+    "category": "fertilizer",
+    "quantity": 350
+  },
+  {
+    "id": 2,
+    "name": "NPK Fertilizer",
+    "description": "fertilizer, natural or artificial substance containing the chemical elements that improve growth and productiveness of plants.",
+    "price": 126,
+    "image": "https://images.pepagora.com/MjA1ODIw/mediabank/images/products/LiquidNPKFertilizer2085804815_205820.jpg",
+    "category": "fertilizer",
+    "quantity": 157
+  },
+  {
+    "id": 3,
+    "name": " water Fertilizer",
+    "description": "fertilizer, natural or artificial substance containing the chemical elements that improve growth and productiveness of plants.",
+    "price": 76,
+    "image": "https://images.finegardening.com/app/uploads/2015/07/14012933/FG164-water-fertilizers-main-700x531-700x531.jpg",
+    "category": "fertilizer",
+    "quantity": 657
+  },
+  {
+    "id": 4,
+    "name": " water Fertilizer",
+    "description": "fertilizer, natural or artificial substance containing the chemical elements that improve growth and productiveness of plants.",
+    "price": 136,
+    "image": "https://m.media-amazon.com/images/I/512-G1TAfzL._AC_UF1000,1000_QL80_.jpg",
+    "category": "fertilizer",
+    "quantity": 153
+  },
+  {
+    "id": 5,
+    "name": "OlivGreen",
+    "description": "Modern agricultural tools used for harvesting olives in Tunisia typically include mechanized harvesters and shakers. Mechanized harvesters are designed to gently shake the olive trees, causing the ripe olives to fall onto a collection surface, such as a net or conveyor belt.",
+    "price": 120,
+    "image": "https://harvestermachine.com/wp-content/uploads/2020/07/electric-olive-harvest-machine.jpg",
+    "category": "Materiel",
+    "quantity": 350
+  },
+  {
+    "id": 6,
+    "name": "Moto agri",
+    "description": "Modern agricultural tools used for harvesting olives in Tunisia typically include mechanized harvesters and shakers. .",
+    "price": 850,
+    "image": "https://stel.com.tn/media/produits/199-produit-Sans-titre.png",
+    "category": "Materiel",
+    "quantity": 36
+  },
+  {
+    "id": 8,
+    "name": "Tube water",
+    "description": "Modern agricultural tools used for harvesting olives in Tunisia typically include mechanized harvesters and shakers. .",
+    "price": 76,
+    "image": "https://m.media-amazon.com/images/I/61WeEjOJepL._AC_UF894,1000_QL80_.jpg",
+    "category": "Materiel",
+    "quantity": 362
+  }
+]
