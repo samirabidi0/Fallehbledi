@@ -4,8 +4,10 @@ module.exports={
     getWeather: async (req,res) => {
         const weather = new WeatherMSN('en', 'c');
         const current = await weather.getCurrentData('sousse');
+        res.send(current)
+        console.log(current);
         const forecast = await weather.getForecastData('sousse', 5);
-        res.send([current,forecast])
+        console.log(forecast);
         current.weather; // Cloudy
         forecast.weather; // Light Rain
     }

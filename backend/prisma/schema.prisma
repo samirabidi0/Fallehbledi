@@ -24,6 +24,9 @@ model farmer {
   location  String
   profileImage String?
   status    status @default(pending)
+   posts post[]
+
+  
   // isVerified Boolean  @default(false)
 }
 
@@ -61,7 +64,7 @@ model currentWeather {
   humidity     Int
   windspeed    String
   location     String
-  date         DateTime
+  date         String
 }
 
 model WeatherForecast {
@@ -77,4 +80,12 @@ model prices {
   id    Int @id @default(autoincrement())
   title String
   price Int
+}
+model post{
+  id              Int @id @default(autoincrement())
+  title           String
+  content         String
+  image           String
+  farmerId  Int    
+  farmer        farmer @relation(fields: [farmerId], references: [id])
 }
