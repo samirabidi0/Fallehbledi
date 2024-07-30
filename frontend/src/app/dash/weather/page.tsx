@@ -1,177 +1,9 @@
-// import Image from 'next/image'
-// import icon from "../../../../public/image/cloudy.png"
-
-// async function getData() {
-//     const res = await fetch('http://127.0.0.1:5000/weather');
-//     if (!res.ok) {
-
-//       throw new Error('Failed to fetch data');
-//     }
-//     return res.json();
-//   }
-
-//   async function Page() {
-//     const data = await getData();  
-//     console.log(data)
-//     const current = data[0]
-//     const forecast1 = data[1]
-//     const forecast2 = data[2]
-//     const forecast3 = data[3]
-    
-//   return (
-//     <>
-//     <div className="">
-//     <div >
-//         <div className="py-6 md:max-w-5xl mx-auto flex mb-4 w-full">
-            
-//             <div className="flex-1 p-3">
-//                     <div className="max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg mb-6">
-//                           <div className="mb-20">
-//                               <p className="text-3xl font-semibold text-gray-500">{current.location}</p>
-//                               <p className="text-xl font-normal text-gray-500">{current.date}</p>
-//                               <p className="text-xl font-normal text-gray-500">{current.weather}</p>
-//                         </div>
-//                             <div className="flex mb-10">
-//                                 <div className="w-2/4 flex ">
-//                                     <div className="flex-no-shring mr-5">
-//                                       <Image src={icon} width="100" height={100} alt=''/> 
-//                                     </div>
-//                                           <div className="w-full text-6xl relative"> 
-//                                                 32
-//                                                 <sup className="text-lg absolute top-0 "> 
-//                                                        <sup>{current.temperature}</sup> C 
-//                                                 </sup> 
-//                                              </div> 
-//                                 </div>
-//                                 <div className="w-2/4">
-//                                     <div className="mb-10">
-//                                         <p className=" text-gray-600 mt-5">Precipitation: 8%</p>
-//                                         <p className=" text-gray-600">Humidity: 73%</p>
-//                                         <p className=" text-gray-600">Wind: 10km/h</p>
-//                                      </div>
-//                                     <ul className="flex my-3 text-sm">
-//                                         <li className="border-t">
-//                                             <a className="bg-gray-200 border border-gray-500 text-center py-2 px-4 hover:shadow-outline hover:bg-gray-400   ">Temperature</a>
-//                                         </li>
-//                                         <li className="border-t">
-//                                                 <a className="bg-gray-200 border border-l-0  border-gray-500 text-center py-2 px-4 hover:shadow-outline hover:bg-gray-400   ">Precipitation</a>
-//                                         </li>
-//                                         <li className="border-t">
-//                                                 <a className="bg-gray-200 border border-l-0 border-gray-500 text-center py-2 px-4 hover:shadow-outline hover:bg-gray-400   ">Wind</a>
-//                                         </li>
-//                                     </ul>
-//                                 </div>
-//                         </div>
-//                         <div className="flex">
-//                             <div className="flex justify-between">
-//                                             <div className="flex-col items-center mr-5">
-//                                                     <p>
-//                                                         {forecast1.day}
-//                                                     </p>
-//                                                     <img src="" />
-//                                                     <p>
-//                                                         {forecast1.lowTemperature} <sup>{forecast1.highTemperature}</sup>
-//                                                     </p>
-//                                                 </div>
-
-//                                                 <div className="flex-col items-center mr-5">
-//                                                         <p>
-//                                                             {forecast2.day}
-//                                                         </p>
-//                                                         <img src="" />
-//                                                         <p>
-//                                                             {forecast2.lowTemperature} <sup>{forecast2.highTemperature}</sup>
-//                                                         </p>
-//                                                     </div>
-
-//                                                     <div className="flex-col items-center mr-5">
-//                                                             <p>
-//                                                                 {forecast3.day}
-//                                                             </p>
-//                                                             <img src="" />
-//                                                             <p>
-//                                                                 {forecast3.lowTemperature} <sup>{forecast3.lowTemperature}</sup>
-//                                                             </p>
-//                                                         </div>  
-                                                                    
-//                             </div>
-//                         </div>
-//                     </div>
-//             </div>
-//         </div>
-// </div>
-// </div>
-// </>
-//   )
-// }
-
-// export default Page
-
-
-
-
 "use client"
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
 import Image from 'next/image';
-import React from 'react';
+import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
-// Register Chart.js components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
-const dummyData = {
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-  datasets: [
-    {
-      label: 'Temperature',
-      data: [22, 21, 23, 25, 24, 26, 27],
-      fill: false,
-      backgroundColor: 'blue',
-      borderColor: 'blue',
-    },
-  ],
-};
-
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      display: true,
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Weekly Temperature',
-    },
-  },
-  scales: {
-    x: {
-      type: 'category',
-      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    },
-    y: {
-      type: 'linear',
-      beginAtZero: true,
-    },
-  },
-};
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 async function getData() {
   const res = await fetch('http://127.0.0.1:5000/weather');
@@ -181,10 +13,32 @@ async function getData() {
   return res.json();
 }
 
-const Page = async () => {
+async function Page() {
   const data = await getData();
   console.log(data);
   const current = data[0];
+  const forecast = data.slice(1);
+
+  // Prepare data for the chart
+  const chartData = {
+    labels: forecast.map((day: any) => day.date),
+    datasets: [
+      {
+        label: 'High Temperature',
+        data: forecast.map((day: any) => day.highTemperature),
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        fill: true,
+      },
+      {
+        label: 'Low Temperature',
+        data: forecast.map((day: any) => day.lowTemperature),
+        borderColor: 'rgba(153, 102, 255, 1)',
+        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+        fill: true,
+      },
+    ],
+  };
 
   return (
     <>
@@ -192,7 +46,7 @@ const Page = async () => {
         <div>
           <div className='py-6 md:max-w-5xl mx-auto mb-4 w-full'>
             <div className='flex-1 p-3 text-white'>
-              <div className='max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg mb-6 mt-20 bg-[#6d7ade93]'>
+              <div className='max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg mb-6 mt-20 bg-[#070a3393]'>
                 {/* Current weather box */}
                 <div className='flex flex-col gap-y-3 mb-5 p-4 w-3/5 bg-blue-950 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg border border-white border-opacity-40'>
                   <div>
@@ -212,7 +66,7 @@ const Page = async () => {
                       <p>Feels like 36°</p>
                     </div>
                   </div>
-                  <p>This skies will be mostly clear. The low will be 79°.</p>
+                  <p>The skies will be mostly clear. The low will be 79°.</p>
                   <div className='flex gap-5'>
                     <div>
                       <p>Air quality</p>
@@ -240,15 +94,6 @@ const Page = async () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Graph Section */}
-                <div className='mt-6'>
-                  <h2 className='text-lg font-bold mb-4'>Temperature Graph</h2>
-                  <div className='w-full h-40 bg-blue-200 rounded-lg p-4'>
-                    <Line data={dummyData} options={options} />
-                  </div>
-                </div>
-
                 <div>
                   <h2>3 day forecast</h2>
                   <div className='flex gap-2 w-full'>
@@ -265,7 +110,7 @@ const Page = async () => {
                         </div>
                       </div>
                     </div>
-                    {data.slice(1).map((e: any, idx: any) => (
+                    {forecast.map((e: any, idx: any) => (
                       <div
                         key={idx}
                         className='w-60 p-2 bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg border border-white border-opacity-40'
@@ -282,6 +127,11 @@ const Page = async () => {
                     ))}
                   </div>
                 </div>
+                {/* Chart */}
+                <div className='mt-6'>
+                  <h2>Temperature Trends</h2>
+                  <Line data={chartData} />
+                </div>
               </div>
             </div>
           </div>
@@ -292,5 +142,3 @@ const Page = async () => {
 }
 
 export default Page;
-  
-
