@@ -12,7 +12,7 @@ import { TiWeatherCloudy } from "react-icons/ti";
 const profileMenu = () => {
   const { active, setActive } = useActive();
 const menuRef = useRef<HTMLDivElement>();
-const imgRef = useRef()
+const imgRef = useRef<HTMLDivElement> ()
 window.addEventListener('click',(e)=>{
   if(e.target !== menuRef.current && e.target !== imgRef.current){
     setActive(false)
