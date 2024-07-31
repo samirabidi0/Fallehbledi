@@ -61,3 +61,34 @@ exports.Register = [
     }
   }
 ];
+// const getAllfarmer = async (req, res) => {
+//   try {
+//     let result = await prisma.farmer.findMany()
+//     console.log(result);
+//     res.status(200).json(result)
+//   } catch (err) {
+//     console.log(err);
+//     res.status(404).json({ error: " not found." })
+//   }
+// }
+// const getOnefarmer = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+    
+//     const farme = await prisma.farmer.findUnique({
+//       where: { id: parseInt(id) },
+
+//     });
+
+//     if (farme) {
+//       console.log(patient);
+//       res.status(200).json(patient);
+//     } else {
+//       res.status(404).json({ error: "Patient not found." });
+//     }
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json({ error: "An error occurred while retrieving the patient." });
+//   }
+// };
+// module.exports={getAllfarmer,getOnefarmer}

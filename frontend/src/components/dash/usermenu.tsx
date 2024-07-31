@@ -1,51 +1,39 @@
-
-'use client'
 import Image from 'next/image'
-import { useState } from 'react'
-import Link from 'next/link'
-
-const ProfileMenu = () => {
-    const [showMenu, setShowMenu] = useState(false);
-
-    const toggleMenu = () => {
-        setShowMenu(!showMenu);
-    }
-
-    return (
-        <div className="relative">
-            <button onClick={toggleMenu} className="flex items-center text-sm rounded-full focus:outline-none">
-                <Image
-                    src="/image/profile.jpg"
-                    alt="User Profile"
-                    width={75}
-                    height={60}
-                    className="rounded-full"
-                />
-            </button>
-            {showMenu && (
-                <div id="userDropdown" className="absolute right-0 mt-2 w-44 bg-white divide-y divide-gray-100 rounded-lg shadow">
-                    <div className="px-4 py-3 text-sm text-gray-900">
-                        <div>Bonnie Green</div>
-                        <div className="font-medium truncate">name@flowbite.com</div>
-                    </div>
-                    <ul className="py-2 text-sm text-gray-900">
-                        <li>
-                            <Link href="/dash" className="block px-4 py-2 hover:bg-[#058f1a] hover:text-white">Dashboard</Link>
-                        </li>
-                        <li>
-                            <Link href="/editprofile" className="block px-4 py-2 hover:bg-[#058f1a] hover:text-white">Settings</Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="block px-4 py-2 hover:bg-[#058f1a] hover:text-white">My Cart</Link>
-                        </li>
-                    </ul>
-                    <div className="py-1">
-                        <Link href="/" className="block px-4 py-2 hover:bg-[#058f1a] hover:text-white">Sign out</Link>
-                    </div>
-                </div>
-            )}
-        </div>
-    )
+import ProfileImage from '../../../public/image/profile.jpg'
+const userMenu = () => {
+  return (
+    <div className="flex items-center md:mr-20">
+            <div>
+              <button type="button" className="flex bg-gray-800 rounded-full" >
+                <Image width={612} height={408} className="w-12 h-12 rounded-full" src={ProfileImage} alt="user photo"/>
+              </button>
+            </div>
+            <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-2">
+              <div className="px-4 py-3" role="none">
+                <p className="text-sm text-gray-900 dark:text-white" role="none">
+                  Neil Sims
+                </p>
+                <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                  neil.sims@flowbite.com
+                </p>
+              </div>
+              <ul className="py-1" role="none">
+                <li>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Settings</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Earnings</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Sign out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+  )
 }
 
-export default ProfileMenu
+export default userMenu
