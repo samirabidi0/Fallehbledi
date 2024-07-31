@@ -15,7 +15,6 @@ async function getData() {
 
 async function Page() {
   const data = await getData();
-  console.log(data);
   const current = data[0];
   const forecast = data.slice(1);
 
@@ -34,7 +33,7 @@ async function Page() {
         label: 'Low Temperature',
         data: forecast.map((day: any) => day.lowTemperature),
         borderColor: 'rgba(153, 102, 255, 1)',
-        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+        backgroundColor: 'rgba(140, 102, 255, 0.2)',
         fill: true,
       },
     ],
@@ -46,7 +45,7 @@ async function Page() {
         <div>
           <div className='py-6 md:max-w-5xl mx-auto mb-4 w-full'>
             <div className='flex-1 p-3 text-white'>
-              <div className='max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg mb-6 mt-20 bg-[#070a3393]'>
+              <div className='max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg mb-6 mt-20 bg-[#0e135e93]'>
                 {/* Current weather box */}
                 <div className='flex flex-col gap-y-3 mb-5 p-4 w-3/5 bg-blue-950 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg border border-white border-opacity-40'>
                   <div>
