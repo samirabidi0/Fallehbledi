@@ -1,6 +1,9 @@
-
+import Link from 'next/link';
 import Image from "next/image"
 import Icon from "../../../public/image/Team spirit-pana.png"
+import Addpost from "./addpost";
+import Moredetail from "./moredetail";
+import Addcomment from './addcomment';
 interface posts {
   id: number;
   firstName:string;
@@ -8,18 +11,19 @@ interface posts {
   title:string;
   content:string;
   image:string;
+  profileImage:string
+  createdAt:string
 }
 async function getData() {
-  const res = await fetch(`http://127.0.0.1:5000/api/post/getfarmerpost/3`, { next: { revalidate: 1 } })
+  const res = await fetch(`http://127.0.0.1:5000/api/post/getfarmerpost/2`, { next: { revalidate: 1 } })
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
   return res.json()
 }
 export default async function Page() {
-  
   const data = await getData()
-   console.log(data);
+  //  console.log(data);
    
   return (
     <div className=" min-h-screen flex flex-col items-center">
@@ -46,17 +50,26 @@ export default async function Page() {
                    {data.map((post:posts) => (
                      <div key={post.id} className="bg-white p-4 rounded-lg shadow">
                        <div className="flex items-start space-x-4">
+                        
                          <img
-                           src={post.image}
+                           src={post.profileImage}
                            alt="User Avatar"
                            className="w-12 h-12 rounded-full object-cover"
                          />
                          <div>
-                           <p className="text-lg font-semibold">{post.firstName}</p>
+                         <p className="text-lg font-semibold">{post.firstName}</p>
+                         </div>
+                         <div>
+                           
                            <p className="text-sm font-medium text-gray-500">
                              {post.title}
                            </p>
                           <p className="text-gray-700">{post.content}</p>
+                          <img
+                           src={post.image}
+                           alt="User Avatar"
+                           className="w-12 h-12  object-cover"
+                         />
                         </div>
                       </div>
                      </div>
@@ -76,6 +89,9 @@ export default async function Page() {
                  </div>
                </div>
              </div>
+             <Addpost/>
+             <Addcomment/>
+             <Moredetail/>
            </div>
          
       );
