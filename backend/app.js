@@ -5,6 +5,7 @@ const prisma = require("./database/prisma")
 const routersAuthfarmer = require("./routes/Authfarmer.js")
 const routerFarmtools = require("./routes/FarmerTools.js")
 const {getWeather} = require('./WeatherAPI/Weather.js')
+const routercommunity=require("./routes/community.js")
 //Declare the express app
 const cors = require("cors")
 
@@ -22,6 +23,7 @@ dotenv.config();
 app.get('/prices',pricesData);
 app.use('/api/farmer',routersAuthfarmer)
 app.use('/api/tools', routerFarmtools)
+app.use('/api/post',routercommunity)
 app.get('/weather',getWeather)
 
 
