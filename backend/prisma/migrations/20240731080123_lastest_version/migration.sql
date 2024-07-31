@@ -87,6 +87,16 @@ CREATE TABLE "post" (
     CONSTRAINT "post_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "news" (
+    "id" SERIAL NOT NULL,
+    "title" TEXT NOT NULL,
+    "content" TEXT NOT NULL,
+    "image" TEXT NOT NULL,
+
+    CONSTRAINT "news_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "farmer_email_key" ON "farmer"("email");
 
