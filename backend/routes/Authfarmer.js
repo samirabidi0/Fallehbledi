@@ -5,6 +5,8 @@ const {Register} = require("../controllers/Auth/FarmerSignUp")
 
 
 router.post("/signup" , Register)
+// router.get("/getall",getAllfarmer)
+// router.get("/getone/:id",getOnefarmer)
 router.post("/signin", SignIn)
 
 module.exports = router
