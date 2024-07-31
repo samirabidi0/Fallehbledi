@@ -26,7 +26,7 @@ app.get('/prices',pricesData);
 app.use('/api/farmer',routersAuthfarmer)
 app.use('/api/tools', routerFarmtools)
 app.use('/api/post',routercommunity)
-app.get('/weather',getWeather)
+// app.get('/weather',getWeather)
 app.use('/news', newsRouter)
 
 
