@@ -7,7 +7,7 @@ const routerFarmtools = require("./routes/FarmerTools.js")
 const {getWeather} = require('./WeatherAPI/Weather.js')
 const routercommunity=require("./routes/community.js")
 const newsRouter = require ('./routes/News.js')
-const routercomment=require('./controllers/comment.js')
+const routercomment=require('./routes/comment.js')
 //Declare the express app
 const cors = require("cors")
 

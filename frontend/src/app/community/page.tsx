@@ -19,7 +19,7 @@ interface posts {
   createdAt:string
 }
 async function getData() {
-  const res = await fetch(`http://127.0.0.1:5000/api/post/getfarmerpost/2`, { next: { revalidate: 1 } })
+  const res = await fetch(`http://127.0.0.1:5000/api/post/getfarmerpost/3`, { next: { revalidate: 1 } })
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
@@ -31,7 +31,7 @@ export default async function Page({ searchParams }: SearchParamProps) {
 	// const showModal = searchParams?.modal === "true";
 	// const postId = searchParams?.id;
   const data = await getData()
-  //  console.log(data);
+   console.log(data);
    
   return (
     <div className=" min-h-screen flex flex-col items-center">
@@ -96,7 +96,7 @@ export default async function Page({ searchParams }: SearchParamProps) {
             </div>
           </div>
           <div className="px-4 pb-4 text-black text-base">
-            Paparazzi can't keep their cameras off me and Tom 
+            {post.title}
           </div>
           <div className="relative">
             <img
@@ -105,25 +105,25 @@ export default async function Page({ searchParams }: SearchParamProps) {
               className="w-full"
             />
             <div className="absolute bottom-0 left-0 bg-white bg-opacity-75 w-full p-4 text-center">
-              <div className="text-sm font-bold text-blue-600 leading-tight">
-                Tom Kroos and his best pal stunned at Simone Biles Olympic
-                Performance
-              </div>
+              
               <div className="text-xs text-gray-700">
-                USA women's gymnastics team advanced to the team final on
-                Tuesday
+                {post.content}
               </div>
               <div className="text-xs text-gray-500">
-                Published on July 20, 2021 12:07 PM EDT
+                Published on {post.createdAt}
               </div>
             </div>
           </div>
           <div className="flex justify-between items-center p-4 border-t border-gray-200 text-xs text-gray-700">
+            
             <div className="flex space-x-4">
+            <Link href="community/?show=true">
               <div className="flex items-center space-x-2">
                 <i className="far fa-comment-alt"></i>
                 <span> Comments</span>
               </div>
+              </Link>
+              {show && <Addcomment />}
             </div>
           </div>
         </div>
