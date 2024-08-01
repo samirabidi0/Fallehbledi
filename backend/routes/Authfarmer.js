@@ -2,6 +2,8 @@ const express = require("express")
 const router = express.Router()
 const SignIn = require('../controllers/Auth/FarmerSignIn')
 const {Register} = require("../controllers/Auth/FarmerSignUp")
+const {updateProfile} = require("../controllers/Farmer.js");
+ router.put("/:id" , updateProfile)
 
 
 router.post("/signup" , Register)
