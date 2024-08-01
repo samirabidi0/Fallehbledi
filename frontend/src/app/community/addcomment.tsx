@@ -21,6 +21,9 @@ const addcomment = () => {
         if(response.ok){
           revalidatePath('/community')
       }
+     
+        
+
         } 
         catch (error) {
             console.log(error);  
