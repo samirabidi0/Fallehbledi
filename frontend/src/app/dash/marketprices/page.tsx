@@ -1,51 +1,22 @@
-import Prices from '../../../data/prices.json'
+import Image from 'next/image'
+import Marketprices from '../marketPrice'
 
 const page = () => {
-    const {prices} = Prices
 
   return (
-    <div className=" ml-[15rem]">
-          <h1  className="flex items justify-center p-5 text-3xl font-bold">Lastest Market Prices For 29/07/2024</h1>
-
-<div className="relative overflow-x-auto ml-[15rem]">
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-900 uppercase bg-gray-100 ">
-            <tr>
-                <th scope="col" className="px-6 py-3 rounded-s-lg">
-                    Product name
-                </th>
-            
-                <th scope="col" className="px-6 py-3 rounded-e-lg">
-                    Price
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            {prices.map((elem)=>{
-            return (
-              <tr className="bg-white">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                    {elem.title}
-                </th>
-                
-                <td className="px-6 py-4 font-medium text-gray-900">
-                    TND {elem.price}
-                </td>
-            </tr>
-            )
-          })}
-            
-        </tbody>
-        <tfoot>
-            <tr className="font-semibold text-gray-900 dark:text-white">
-                <th scope="row" className="px-6 py-3 text-base">Total</th>
-                <td className="px-6 py-3">3</td>
-                <td className="px-6 py-3">21,000</td>
-            </tr>
-        </tfoot>
-    </table>
-</div>
+    <div className=" ">
+        
+          <section className="">
+    <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12  ">
+        <h1 className="mb-4 mt-[4rem] text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl ">Stay informed with the most up-to-date <span className='text-[#058f1a]'>Market Prices!</span></h1>
+        <p className="mb- text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"> Explore our collection to find the latest pricing on all our products and ensure you're getting the best value.</p>
+    </div>
+</section>
+<div className="">
+            <div className="">
+                <Marketprices />
+            </div>
+        </div>
 
       </div>
         

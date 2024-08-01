@@ -1,5 +1,5 @@
 import Prices from '../../data/prices.json'
-
+import Image from 'next/image'
 interface PriceItem {
     title: string;
     price: number;
@@ -28,11 +28,14 @@ interface PriceItem {
         <div className="ticker-wrap">
 <div className="ticker">
    <div className="ticker_item">
-    <div className="flex space-x-20">
+    <div className="flex space-x-20 ">
     {prices.map((element) => (
+<div className="flex">
+  <Image src={element.image} alt={element.title} width={50} height={50} />
 <div className="flex space-x-4">
-<h1 key={element.title}><span className="font-bold">PRODUCT: </span> <span className="ml-2 font-bold">{element.title}</span></h1>
-<h1 key={element.title} className="font-bold">PRICE:{element.price}</h1>
+<h1 ><span className="font-bold"></span> <span className="ml-2 font-bold">{element.title}</span></h1>
+<h1  className="font-bold">{element.price} TND</h1>
+</div>
 </div>
 ))}
     </div>
