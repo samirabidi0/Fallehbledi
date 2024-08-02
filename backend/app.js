@@ -8,6 +8,7 @@ const {getWeather} = require('./WeatherAPI/Weather.js')
 const routercommunity=require("./routes/community.js")
 const newsRouter = require ('./routes/News.js')
 const routercomment=require('./routes/comment.js')
+const routeradmin=require('./routes/Authadmin.js')
 //Declare the express app
 const cors = require("cors")
 
@@ -29,6 +30,7 @@ app.use('/api/post',routercommunity)
 app.use('/api/comment',routercomment)
 // app.get('/weather',getWeather)
 app.use('/news', newsRouter)
+app.use('/api/admin',routeradmin)
 
 
 //Listen for requests  :

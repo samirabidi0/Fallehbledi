@@ -24,6 +24,10 @@ module.exports = {
       getallpost:async (req, res) => {
         try {
           const posts = await prisma.post.findMany({
+            include: {
+              farmer : true,
+              comments:true
+            },
           });
           res.status(200).json(posts);
         } catch (error) {
