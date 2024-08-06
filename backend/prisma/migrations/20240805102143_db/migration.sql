@@ -35,10 +35,10 @@ CREATE TABLE "farmtools" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "description" TEXT NOT NULL,
-    "price" INTEGER NOT NULL,
+    "price" TEXT NOT NULL,
     "image" TEXT NOT NULL,
     "category" TEXT NOT NULL,
-    "quantity" INTEGER NOT NULL,
+    "quantity" TEXT NOT NULL,
 
     CONSTRAINT "farmtools_pkey" PRIMARY KEY ("id")
 );
@@ -71,8 +71,9 @@ CREATE TABLE "WeatherForecast" (
 -- CreateTable
 CREATE TABLE "prices" (
     "id" SERIAL NOT NULL,
-    "title" TEXT NOT NULL,
-    "price" INTEGER NOT NULL,
+    "name" TEXT NOT NULL,
+    "price" TEXT NOT NULL,
+    "image" TEXT NOT NULL,
 
     CONSTRAINT "prices_pkey" PRIMARY KEY ("id")
 );
